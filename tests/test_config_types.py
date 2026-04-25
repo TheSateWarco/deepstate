@@ -29,3 +29,7 @@ class ConfigParseTest(deepstate_base.DeepStateTestCase):
         self.assertIsInstance(result["timeout"], int)
         self.assertIsInstance(result["mem_limit"], int)
         self.assertIsInstance(result["min_log_level"], int)
+
+        self.assertEqual(result["timeout"], 36000)
+        self.assertEqual(result["mem_limit"], 100)
+        self.assertEqual(result["min_log_level"], 2)
